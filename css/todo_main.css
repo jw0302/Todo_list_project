@@ -1,0 +1,89 @@
+.main-container {
+    position: relative;
+    margin: 100px auto;
+    border: 2px solid #dbdbdb;
+    width: 512px;
+    height: 513px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    background-color: #9c88ff;
+}
+
+.main-title {
+    font-size: 24px;
+    color: white;
+}
+
+.main-todo-input{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.main-input {
+    padding: 8px;
+    width: 456px;
+    height: 43px;
+    background-color: #4e4e4e;
+    font-size: 20px;
+}
+
+input::placeholder{
+    color: rgb(214, 210, 210)
+}
+
+.main-input-button {
+    
+    border: none;
+    padding: 0px 16px;
+    background-color: #868e96;
+    font-size: 34px;
+    color: white;
+}
+
+.check-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-todo-li {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: 16px;
+    width: 100%;
+    height: 57px;
+
+}
+
+.check-button {
+    display: flex;
+}
+.main-todo-li .text {
+    width: 416px;
+}
+.main-todo-li .text .t{
+    display: flex;
+    margin-left: 8px;
+
+    font-size: 16px;
+    
+}
+
+.edit-button {
+    display: flex;
+    border: none;
+  
+}
+
+.remove-button {
+    display: flex;
+    border: none;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="./css/todo_main.css">
+</head>
+<body>
+    <main class="main-container main-hidden">
+        <div class="main-box">
+            <header class="main-header"><h1 class="main-title">일정관리</h1></header>
+            <div class="main-todo-input">
+                <input type="text" class="main-input" placeholder="할 일을 입력하세요">
+                <button class="main-input-button">+</button>
+            </div>
+        </div>
+        <div class="main-todo-list">
+            <ul class="main-todo-ul">
+                <!-- <li class="main-todo-li">
+                    <div class="main-todo-div">
+                        <input type="checkbox" class="check-button">
+                    </div>
+                    <div class="text">
+                        ${todoObj.todoContent}
+                    </div>
+                    <div>
+                        <button type="button" class="edit-button"><i class="fa-solid fa-pen"></i>
+                        </button>
+                    </div>
+                    <div>
+                        <button type="button" class="remove-button"><i class="fa-solid fa-circle-minus"></i>
+                        </button>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+    </main>
+    <div class="modal-container">
+        <div class="modal-section">
+            <div class="modal-header">
+                <h1 class="modal-title">LIST 수정</h1>
+            </div>
+            <div class="modal-main">
+                <textarea class="edit-input"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="modal-ok-button">수정</button>
+                <button type="button" class="modal-cancel-button">취소</button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/todo.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
