@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/todo_main.css">
 </head>
 <body>
-    <main class="main-container main-hidden">
+    <main class="main-container">
         <div class="main-box">
             <header class="main-header"><h1 class="main-title">일정관리</h1></header>
             <div class="main-todo-input">
@@ -41,9 +41,9 @@
             </ul>
         </div>
     </main>
-    <div class="modal-container">
+    <div class="modal-container modal-hidden">
         <div class="modal-section">
-            <div class="modal-header">
+            <!-- <div class="modal-header">
                 <h1 class="modal-title">LIST 수정</h1>
             </div>
             <div class="modal-main">
@@ -52,10 +52,25 @@
             <div class="modal-footer">
                 <button type="button" class="modal-ok-button">수정</button>
                 <button type="button" class="modal-cancel-button">취소</button>
+            </div> -->
+        </div>
+    </div>
+    <div class="modal-container modal-hidden">
+        <div class="modal-section">
+            <!-- <div class="modal-header">
+                <h1 class="modal-title">LIST 삭제</h1>
             </div>
+            <div class="modal-main">
+                <p class="modal-message">List를 삭제하시겠습니까?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="modal-ok-button">확인</button>
+                <button type="button" class="modal-cancel-button">취소</button>
+            </div> -->
         </div>
     </div>
     <script src="./js/todo.js"></script>
+    <script src="./js/jw.js"></script>
     <script src="./js/app.js"></script>
 </body>
 </html>

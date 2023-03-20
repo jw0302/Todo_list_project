@@ -36,7 +36,12 @@
     height: 20%;
     background-color: #9c88ff;
 }
-  
+
+.modal-title {
+    font-size: 20px;
+    color: white;
+}
+
 .modal-main {
     display: flex;
     flex-direction: column;
@@ -44,11 +49,6 @@
     align-items: center;
     padding: 10px;
     height: 60%;
-}
-
-.modal-title {
-    font-size: 20px;
-    color: white;
 }
   
 .edit-input {

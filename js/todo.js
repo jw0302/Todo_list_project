@@ -8,12 +8,44 @@ class AddEvent {
     }
 
     addEventInputButtonClick() {
-       const mainInputButton = document.querySelector(".main-input-button");
-       mainInputButton.onclick = () => {
-        TodoService.getInstance().addTodo();
-        const mainTodoInput = document.querySelector(".main-todo-input");
-        mainTodoInput.value = ``;
-       }
+        const mainInputButton = document.querySelector(".main-input-button");
+        mainInputButton.onclick = () => {
+         TodoService.getInstance().addTodo();
+         const mainTodoInput = document.querySelector(".main-input");
+         mainTodoInput.value = ``;
+        }
+     }
+
+     addEventAddTodoKeyUp() {
+        const todoInput = document.querySelector(".main-input");
+        todoInput.onkeyup = () => {
+          if (window.event.keyCode == 13) {
+            const mainInputButton = document.querySelector(".main-input-button");
+            mainInputButton.click();
+          }
+        };
+      }
+
+      addEventRemoveClick() {
+        const RemoveButtons = document.querySelectorAll(
+            ".remove-button"
+          );
+          RemoveButtons.forEach((RemoveButton, index) => {
+            RemoveButton.onclick = () => {
+              ModalService.getInstance().showRemoveModal(index);
+            };
+          });
+    }
+
+     addEventModifyOkClick() {
+        const editButtons = document.querySelectorAll(
+            ".edit-button"
+          );
+          editButtons.forEach((editButton, index) => {
+            editButton.onclick = () => {
+              ModalService.getInstance().showModifyModal(index);
+            };
+          });
     }
 
 }
@@ -39,6 +71,11 @@ class TodoService {
         this.loadTodoList();
     }
 
+    updateLocalStorage() {
+        localStorage.setItem("todoList", JSON.stringify(this.todoList));
+        this.loadTodoList();
+      }
+
     addTodo() {
         const mainInput = document.querySelector(".main-input");
         const nowDate = new Date();
@@ -60,6 +97,7 @@ class TodoService {
         }
 
         this.todoList.push(todoObj);
+        this.updateLocalStorage();
         this.loadTodoList();
      }
 
@@ -86,6 +124,10 @@ class TodoService {
             </li>
                 `;
         });
+
+        AddEvent.getInstance().addEventRemoveClick();
+        AddEvent.getInstance().addEventModifyOkClick();
+
      }
 
 
